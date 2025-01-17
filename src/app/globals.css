@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
+:root {
+    --icon-transition-duration: 300ms;
+  }
+  
+  .dark .moon-icon {
+    transform: rotate(0deg) scale(1);
+    transition: transform var(--icon-transition-duration);
+  }
+  
+  .light .sun-icon {
+    transform: rotate(0deg) scale(1);
+    transition: transform var(--icon-transition-duration);
+  }

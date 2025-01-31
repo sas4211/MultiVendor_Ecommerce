@@ -1,22 +1,25 @@
-import Image from "next/image";
+// React, Next.js
 import { FC } from "react";
+import Image from "next/image";
+
+// Logo image
+import LogoImg from "../../../public/assets/icons/Log-1.png"
 
 interface LogoProps {
   width: string;
-  height: string;  
+  height: string;
 }
-const Logo:FC<LogoProps>=({ width, height })=> {
-    return(
+
+const Logo: FC<LogoProps> = ({ width, height }) => {
+  return (
     <div className="z-50" style={{ width: width, height: height }}>
-    <Image
-    src="/assets/icons/Logo.png" 
-    alt="LetsShop"
-    width={50}
-    height={20}
-    className="w-full h-full object-cover overflow-visible"
-    />
-</div>
-    );
+      <Image
+        src={LogoImg}
+        alt="GoShop"
+        className="w-full h-full object-cover overflow-visible"
+      />
+    </div>
+  );
 };
 
 export default Logo;
